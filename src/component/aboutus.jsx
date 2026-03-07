@@ -3,7 +3,7 @@ import about from "../assets/about.jpeg";
 
 export default function About() {
   return (
-    <section id="about" className="bg-gray-50 pt-15 pb-12">
+    <section id="about" className="bg-gray-50 pt-16 pb-12 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* CENTER HEADING */}
@@ -53,6 +53,7 @@ export default function About() {
               brands, corporate clients, and product manufacturers.
             </p>
 
+            {/* FEATURES */}
             <div className="mt-8 space-y-4">
               {[
                 "Premium Quality Materials",

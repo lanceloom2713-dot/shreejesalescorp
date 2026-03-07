@@ -2,14 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 
 import Header from './component/header'
-import Hero from './component/hero'
-import About from './component/aboutus'
-import Choose from './component/choose'
 import Footer from './component/footer'
-import Serve from './component/serve'
-import ProductCategories from './component/category'
-import Contact from './component/contactus.jsx'
+
 import Home from './component/home.jsx'
+import About from './component/aboutus'
+import ProductCategories from './component/category'
+import Serve from './component/serve'
+import Contact from './component/contactus.jsx'
 
 function App() {
 
@@ -18,15 +17,20 @@ function App() {
 
       <Header />
 
-      <Routes>
+      {/* Main content pushed below fixed navbar */}
+      <main className="pt-20">
 
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<ProductCategories />} />
-        <Route path="/serve" element={<Serve />} />
-        <Route path="/contact" element={<Contact />} />
+        <Routes>
 
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<ProductCategories />} />
+          <Route path="/serve" element={<Serve />} />
+          <Route path="/contact" element={<Contact />} />
+
+        </Routes>
+
+      </main>
 
       <Footer />
 

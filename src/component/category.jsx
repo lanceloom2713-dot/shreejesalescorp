@@ -1,4 +1,3 @@
-import { Package, Sparkles, Layers, Gift, Heart, Printer, Crown, Box } from "lucide-react";
 import denver from "../assets/products/Denver.jpeg";
 import bag from "../assets/products/bag.png";
 import airodo from "../assets/products/airodo.png";
@@ -10,81 +9,70 @@ import wallcalender from "../assets/products/wallcalender.png";
 import shadecards from "../assets/products/shadecards.png";
 import diary from "../assets/products/diary.png";
 import haldiram from "../assets/products/haldiram.png";
-
-
-
+import foldablebag from "../assets/products/foldablebag.png";
 export default function ProductCategories() {
+
   const categories = [
     {
       title: "Rigid Boxes",
       desc: "Premium rigid boxes designed for luxury packaging and high-end product presentation.",
       image: denver,
-      // icon: <Package size={18} />,
     },
     {
       title: "Drawer Style Rigid Boxes",
-      desc: "Elegant magnetic closure boxes ideal for premium products and corporate gifting.",
+      desc: "Elegant drawer style rigid boxes ideal for premium products and corporate gifting.",
       image: haldiram,
-      // icon: <Sparkles size={18} />,
     },
     {
       title: "Custom Rigid Boxes",
       desc: "Custom rigid packaging with protective inserts for delicate and valuable items.",
       image: theman,
-      // icon: <Layers size={18} />,
     },
     {
       title: "Corporate Gift Boxes",
       desc: "Professional packaging solutions designed for premium corporate gifting.",
       image: customrigid,
-      // icon: <Gift size={18} />,
     },
     {
       title: "Paper Bags",
       desc: "Eco-friendly printed paper bags perfect for retail stores and brand promotions.",
       image: bag,
-      // icon: <Heart size={18} />,
+    },
+    {
+      title: "Foldable Bags",
+      desc: "Lightweight foldable bags designed for convenience, portability, and reusable packaging.",
+      image: foldablebag,
     },
     {
       title: "Shade Cards",
       desc: "High-quality printed shade cards for displaying product colors and materials.",
       image: shadecards,
-      // icon: <Printer size={18} />,
-    },
-    {
-      title: "Post Cards",
-      desc: "Custom printed postcards ideal for marketing, invitations, and promotions.",
-      image: diary,
-      // icon: <Crown size={18} />,
     },
     {
       title: "Custom Danglers",
-      desc: "High-quality custom danglers for retail promotion, product visibility, and effective in-store branding.",
+      desc: "High-quality custom danglers for retail promotion and in-store branding.",
       image: airodo,
-      // icon: <Box size={18} />,
     },
     {
       title: "Personalized Diaries",
       desc: "Branded diaries customized for corporate gifting and business promotions.",
       image: diary,
-      // icon: <Box size={18} />,
     },
     {
       title: "Table Calendar",
-      desc: "Custom printed table calendars perfect for office desks, branding, and corporate promotions.",
+      desc: "Custom printed table calendars perfect for office desks and corporate branding.",
       image: actioncalender,
-      // icon: <Box size={18} />,
     },
     {
       title: "Wall Calendar",
-      desc: "High-quality wall calendars designed for year-round visibility and effective brand promotion.",
+      desc: "High-quality wall calendars designed for year-round visibility and promotion.",
       image: wallcalender,
-      // icon: <Box size={18} />,
     },
   ];
 
   return (
-    <section id="products" className="bg-gray-50 pt-16 pb-12">
+    <section id="products" className="bg-gray-50 pt-16 pb-12 scroll-mt-24">
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Heading */}
@@ -118,16 +106,12 @@ export default function ProductCategories() {
             >
 
               {/* Image */}
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
                 />
-
-                <div className="absolute top-4 right-4 bg-orange-500 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
-                  {item.icon}
-                </div>
               </div>
 
               {/* Content */}
@@ -135,6 +119,7 @@ export default function ProductCategories() {
                 <h3 className="text-lg font-semibold text-blue-900">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-gray-600 text-sm leading-relaxed">
                   {item.desc}
                 </p>
@@ -146,6 +131,7 @@ export default function ProductCategories() {
         </div>
 
       </div>
+
     </section>
   );
 }
