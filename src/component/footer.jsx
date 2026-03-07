@@ -34,7 +34,7 @@ export default function Footer() {
 
             <p className="mt-6 text-gray-400 leading-relaxed">
               Your trusted partner for premium printing and packaging
-              solutions since 2009.
+              solutions since 2000.
             </p>
 
             {/* Social Icons */}

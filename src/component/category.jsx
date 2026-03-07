@@ -10,6 +10,7 @@ import shadecards from "../assets/products/shadecards.png";
 import diary from "../assets/products/diary.png";
 import haldiram from "../assets/products/haldiram.png";
 import foldablebag from "../assets/products/foldablebag.png";
+
 export default function ProductCategories() {
 
   const categories = [
@@ -97,39 +98,40 @@ export default function ProductCategories() {
         </div>
 
         {/* Grid */}
-       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
-  {categories.map((item, index) => (
-    <div
-      key={index}
-      className="relative bg-white rounded-2xl shadow-md overflow-hidden group"
-    >
+          {categories.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group"
+            >
 
-      {/* Image */}
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
-      />
+              {/* Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
 
-      {/* Title */}
-      <div className="p-5 text-center">
-        <h3 className="text-lg font-semibold text-blue-900">
-          {item.title}
-        </h3>
-      </div>
+              {/* Content */}
+              <div className="p-6">
 
-      {/* Hover Description */}
-      <div className="absolute inset-0 bg-black/70 flex items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition duration-300">
-        <p className="text-white text-sm leading-relaxed">
-          {item.desc}
-        </p>
-      </div>
+                <h3 className="text-lg font-semibold text-blue-900">
+                  {item.title}
+                </h3>
 
-    </div>
-  ))}
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
 
-</div>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
 
       </div>
 
