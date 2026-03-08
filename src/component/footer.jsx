@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="flex gap-4 mt-6">
 
   <a
-    href="https://facebook.com"
+    href="https://www.facebook.com/share/1BAaCfvthc/?mibextid=wwXIfr"
     target="_blank"
     rel="noopener noreferrer"
     className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-orange-500 transition"
@@ -68,7 +68,7 @@ export default function Footer() {
   </a>
 
   <a
-    href="https://youtube.com"
+    href="https://youtube.com/@printandpacksolutions?si=HaNnS8-IKnS3_kj7"
     target="_blank"
     rel="noopener noreferrer"
     className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-orange-500 transition"
